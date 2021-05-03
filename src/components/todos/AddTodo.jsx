@@ -14,7 +14,7 @@ const AddTodoContainer = styled.div`
   box-shadow: 2px 2px 4px 2px rgba(201,199,199,0.8);
   padding-top: 10px;
   padding-bottom: 10px;
-  background-color: #40916c;
+  background-color: #CBE4D0;
 `
 
 
