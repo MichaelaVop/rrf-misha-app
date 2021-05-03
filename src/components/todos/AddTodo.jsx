@@ -14,10 +14,11 @@ const AddTodoContainer = styled.div`
   box-shadow: 2px 2px 4px 2px rgba(201,199,199,0.8);
   padding-top: 10px;
   padding-bottom: 10px;
+  background-color: #40916c;
 `
 
 
-const AddTodo = ({state, ...actions}) => {
+const AddTodo = ({}) => {
   const [presentToDoTitle, setPresentToDoTitle] = useState('')
   const [presentToDoText, setPresentToDoText] = useState('')
   const [presentToDo, setPresentToDo] = useState('')

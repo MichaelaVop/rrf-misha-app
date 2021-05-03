@@ -13,7 +13,7 @@ const PrivateRoute = ({ children, ...remainingProps }) => {
         <Route
         {...remainingProps}
         render = {({ location }) =>
-            isLoaded(auth) && !isEmpty(auth) ? ( 
+            isLoaded(auth) && !isEmpty(auth) || (location !== '/') ? ( 
                     children
                 ) : (
                     <Redirect 

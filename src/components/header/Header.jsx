@@ -18,6 +18,8 @@ const HeaderContainer = styled.div`
     padding: 15px 30px;
 `
 const HeaderLinks = styled.a`
+    text-align: center;
+    align-self:center;
     color: white;
     font-size: 1.5em;
     text-decoration: none;
@@ -37,7 +39,7 @@ const Header = () => {
         <HeaderContainer>
             <h2>Signed in as: <span className="header-span">{displayName}</span></h2>
             <HeaderLinks href='todos'>Your todos</HeaderLinks>
-            <HeaderLinks href='/trash'>Your trash</HeaderLinks>
+            {/* <HeaderLinks href='trash'>Your trash</HeaderLinks> */}
         </HeaderContainer>
 
         <AddTodo />

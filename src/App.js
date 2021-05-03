@@ -9,11 +9,7 @@ import TodosInTrash from './components/todos/TodosInTrash'
 import './App.css';
 import Header from './components/header/Header'
 
-import styled from 'styled-components'
 
-// const BackgroundImg = styled.div`
-//   background-image: url(${props => props.img})
-// `
 
 function App() {
   return (

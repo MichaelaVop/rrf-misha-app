@@ -1,22 +1,18 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 import { useFirestoreConnect } from 'react-redux-firebase'
-import { useFirestore } from 'react-redux-firebase'
+
 
 //import AddTodo from './AddTodo'
 import ToDoItem from './TodoItem'
 
 import '../../App.css';
-//import styled from 'styled-components'
 
-// import { call } from 'redux-saga/effects';
 
 const Todos = () => {
    
-    const initState = useSelector((state) => state.firestore.data.todos)
-    const fs = useFirestore()
     const { uid } = useSelector((state) => state.firebase.auth);
-        useFirestoreConnect({
+    useFirestoreConnect({
         collection: `users/${uid}/todos`,
         storeAs: "todos",
     });
@@ -24,13 +20,8 @@ const Todos = () => {
     const todos = useSelector((state) => state.firestore.data.todos);
     console.log('TODOS', todos);
 
-    // const todosRef = fs.collection(`users/${uid}/todos`)
-    // const todos = todosRef.where('trash', '==', true).get()
-    // if (todos.empty) {
     return(
-        
-        <div> 
-            
+        <div>     
             <ul className="todosUl">
                 {todos && Object.values(todos).map((todo) => (
                     <li >
@@ -42,16 +33,19 @@ const Todos = () => {
                         trash={todo.trash}
                     />
                     </li>
-                ))}
-                
+                ))}        
             </ul>
         </div>
     )
-                // } else {
-                //     return (
-                //         <div>No notes</div>
-                //     )
-                // }
+    
+
+        // const mapStateToProps (state, ownProps) => {
+        //     const {todoToBeListed} = state
+
+        //     const {todID} = ownProps
+        //     const todos = getT
+        // }
+   
                 
 }
 
